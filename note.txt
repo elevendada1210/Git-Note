@@ -41,6 +41,61 @@ git log                  //可以显示所有提交过的版本信息
 git reflog               //可以查看所有分支的所有操作记录（包括已经被删除的 commit 记录和 reset 的操作）
 git reset --hard 版本号  //回滚到指定的版本
 
+7)从暂存区到工作区
+git reset HEAD //修改后的文件提交到暂存区，回滚到工作区
+
+8)从工作区红色回滚到透明色
+git checkout 文件名 //对修改文案的无效
+
+第六节：分支
+1)主分支---维护分支---开发分支
+git branch             //查看所有分支
+git branch  分支名称   //创建分支
+git checkout 分支名称  //切换分支
+git merge 要合并的分支名   //首先需要切换到目标分支去合并子分支
+                           //分支合并时可能产生冲突，需要手动修改冲突
+git branch -d 分支名称     //删除分支
+
+2)工作流：创建3个分支（master、dev）
+master ：主分支
+dev：    开发分支
+
+git remote add origin 远程仓库地址  //给远程仓库起一个别名 origin
+git push -u origin 分支  //向远程仓库推送代码
+git clone 远程仓库地址   //拉远程仓库代码
+git checkout 分支名      //切换分支
+
+案例
+在公司开发
+1.git checkout dev   //切换到dev分支进行开发
+2.git merge master   //把master分支合并到dev
+3.修改代码
+4.提交代码
+  git add .
+  git commit -m 'xxxxxx'
+  git push origin dev
+  
+在家中继续开发
+1.切换到dev分支
+  git checkout dev
+2.拉代码
+  git pull origin dev
+3.继续开发
+4.提交代码
+  git add .
+  git commit -m 'xxxxxx'
+  git push origin dev
+
+
+
+
+
+
+
+
+
+
+
 
 
 
