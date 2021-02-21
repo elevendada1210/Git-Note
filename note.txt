@@ -10,7 +10,10 @@ SVN：集中式的版本控制
 第四节：
 1.进入要管理的文件夹
 2.初始化---提名：git init
-3.管理：git status //检查当前文件夹的状态
+3.管理： git status //检查当前文件夹的状态
 4.生成版本：
 git add 文件夹名 //管理的文件，显示绿色，未加入管理的显示红色
+
+git config --global user.mail "lilongfei0720@126.com"
+git config --global user.name "lilongfei"    
 git commit -m ‘描述’ //生成版本
