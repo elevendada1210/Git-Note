@@ -65,7 +65,26 @@ git push -u origin 分支  //向远程仓库推送代码
 git clone 远程仓库地址   //拉远程仓库代码
 git checkout 分支名      //切换分支
 
-
+===案例===
+在公司开发
+1.git checkout dev   //切换到dev分支进行开发
+2.git merge master   //把master分支合并到dev
+3.修改代码
+4.提交代码
+  git add .
+  git commit -m 'xxxxxx'
+  git push origin dev
+  
+在家中继续开发
+1.切换到dev分支
+  git checkout dev
+2.拉代码
+  git pull origin dev
+3.继续开发
+4.提交代码
+  git add .
+  git commit -m 'xxxxxx'
+  git push origin dev
 
 
 
